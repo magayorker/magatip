@@ -21,7 +21,8 @@ class SoDogeTip():
         client_secret = config.reddit_credentials['client_secret']
         username = config.reddit_credentials['username']
         password = config.reddit_credentials['password']
-        self.reddit= praw.Reddit(client_id=client_id, client_secret=client_secret, username=username, password=password)
+        user_agent = config.reddit_credentials['user_agent']
+        self.reddit= praw.Reddit(client_id=client_id, client_secret=client_secret, username=username, password=password, user_agent=user_agent)
         bot_logger.logger.info('Logged into Reddit as: %s' % str(self.reddit.user.me()))
 
 
