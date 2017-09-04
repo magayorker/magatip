@@ -17,7 +17,13 @@ import utils
 
 class SoDogeTip():
     def __init__(self):
-        self.reddit = praw.Reddit(config.bot_name)
+        client_id = config.reddit_credentials['client_id']
+        client_secret = config.reddit_credentials['client_secret']
+        username = config.reddit_credentials['username']
+        password = config.reddit_credentials['password']
+        self.reddit= praw.Reddit(client_id=client_id, client_secret=client_secret, username=username, password=password)
+        bot_logger.logger.info('Logged into Reddit as: %s' % str(self.reddit.user.me()))
+
 
     def main(self, tx_queue, failover_time):
         bot_logger.logger.info('Main Bot loop !')

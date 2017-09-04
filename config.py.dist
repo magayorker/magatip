@@ -24,6 +24,13 @@ history_path = DATA_PATH + 'history/'
 spam_limit = 1000
 rate_fee = 1
 
+reddit_credentials = {
+    "client_id": "",
+    "client_secret": "",
+    "username": "",
+    "password": ""
+}
+
 url_get_value = {
     "coincap": 'http://www.coincap.io/page/DOGE',
     "cryptocompare": 'https://www.cryptocompare.com/api/data/price?fsym=DOGE&tsyms=USD',
