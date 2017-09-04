@@ -108,7 +108,7 @@ class SoDogeTip():
             for account, address in list_account.items():
                 # don't flood rpc daemon
                 time.sleep(1)
-                list_tx = rpc_antispam.listunspent(1, 99999999999, [address])
+                list_tx = rpc_antispam.listunspent(1, 99999999, [address])
 
                 if len(list_tx) > int(config.spam_limit):
                     unspent_amounts = []

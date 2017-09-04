@@ -98,7 +98,7 @@ def get_user_confirmed_balance(address):
 
     unspent_amounts = []
 
-    list_unspent = rpc.listunspent(1, 99999999999, [address])
+    list_unspent = rpc.listunspent(1, 99999999, [address])
 
     # in case of no un-spent transaction
     if len(list_unspent) == 0:
@@ -153,7 +153,7 @@ def send_to(rpc, sender_address, receiver_address, amount, take_fee_on_amount=Fa
 
     bot_logger.logger.info("send %s to %s from %s" % (amount, sender_address, receiver_address))
 
-    list_unspent = rpc.listunspent(1, 99999999999, [sender_address])
+    list_unspent = rpc.listunspent(1, 99999999, [sender_address])
 
     unspent_amounts = []
     raw_inputs = []
@@ -237,7 +237,7 @@ def send_to_failover(rpc, sender_address, receiver_address, amount, take_fee_on_
 
     bot_logger.logger.info("send %s to %s from %s" % (amount, sender_address, receiver_address))
 
-    list_unspent = rpc.listunspent(1, 99999999999, [sender_address])
+    list_unspent = rpc.listunspent(1, 99999999, [sender_address])
 
     unspent_amounts = []
     raw_inputs = []
