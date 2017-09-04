@@ -213,7 +213,7 @@ def send_to(rpc, sender_address, receiver_address, amount, take_fee_on_amount=Fa
     raw_tx = rpc.createrawtransaction(raw_inputs, raw_addresses)
     bot_logger.logger.debug("raw tx : %s" % raw_tx)
 
-    bot_logger.logger.info('send %s Doge form %s to %s ' % (str(amount), receiver_address, receiver_address))
+    bot_logger.logger.info('send %s Maga from %s to %s ' % (str(amount), receiver_address, receiver_address))
 
     logging.disable(logging.DEBUG)
     rpc.walletpassphrase(wallet_passphrase, int(config.rpc_config['timeout']))
@@ -281,7 +281,7 @@ def send_to_failover(rpc, sender_address, receiver_address, amount, take_fee_on_
     raw_tx = rpc.createrawtransaction(raw_inputs, raw_addresses)
     bot_logger.logger.debug("raw tx : %s" % raw_tx)
 
-    bot_logger.logger.info('send %s Doge form %s to %s ' % (str(amount), receiver_address, receiver_address))
+    bot_logger.logger.info('send %s Maga from %s to %s ' % (str(amount), receiver_address, receiver_address))
 
     logging.disable(logging.DEBUG)
     rpc.walletpassphrase(wallet_passphrase, int(config.rpc_config['timeout']))

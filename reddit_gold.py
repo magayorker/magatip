@@ -107,7 +107,7 @@ def store_user_buy(user, quantity, tx_id):
         "user_buyer": user.username,
         "quantity": quantity,
         "price": config.price_reddit_gold,
-        "currency": 'doge',
+        "currency": 'maga',
         "amount": config.price_reddit_gold * quantity,
         "usd_price": utils.get_coin_value(1, 8),
         "total_price": utils.get_coin_value(config.price_reddit_gold * quantity, 2),

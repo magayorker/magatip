@@ -33,7 +33,7 @@ class Tip(object):
             rpc = crypto.get_rpc()
 
         p = re.compile(
-            '(\+\/u\/' + config.bot_name + ')\s?(@?[0-9a-zA-Z-_\/\+]+)?\s+(\d+|[0-9a-zA-Z,.]+)\s(doge)\s?(verify)?',
+            '(\+\/u\/' + config.bot_name + ')\s?(@?[0-9a-zA-Z-_\/\+]+)?\s+(\d+|[0-9a-zA-Z,.]+)\s(maga)\s?(verify)?',
             re.IGNORECASE)
         m = p.search(message_to_parse.strip())
         # Group 1 is +/u/sodogetiptest
@@ -41,7 +41,7 @@ class Tip(object):
         self.receiver = m.group(2)
         # Group 3 is the tip amount in integers(ex.  100) or a word(ex.roll)
         self.amount = m.group(3).replace(',', '.')
-        # Group 4 is doge
+        # Group 4 is maga
         self.currency = m.group(4)
         # Group 5 is either blank(no verify message) or verify(verify message)
         self.verify = True if (m.group(5) == "verify") else False
@@ -92,8 +92,8 @@ class Tip(object):
 
         bot_logger.logger.debug("self.amount = %s" % str(self.amount))
 
-        # if tip is over 1000 doge set verify
-        if float(self.amount) >= float(1000):
+        # if tip is over 10000 maga set verify
+        if float(self.amount) >= float(10000):
             self.verify = True
 
     def set_sender(self, sender_username):

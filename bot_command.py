@@ -337,7 +337,7 @@ def donate(reddit, msg, tx_queue, failover_time):
 
         donate_index = split_message.index('+donate')
         amount = split_message[donate_index + 1]
-        if utils.check_amount_valid(amount) and split_message[donate_index + 2] == 'doge':
+        if utils.check_amount_valid(amount) and split_message[donate_index + 2] == 'maga':
 
             crypto.tip_user(user.username.address, models.User(config.bot_name).address, amount, tx_queue,
                             failover_time)
