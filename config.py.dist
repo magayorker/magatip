@@ -28,7 +28,8 @@ reddit_credentials = {
     "client_id": "",
     "client_secret": "",
     "username": "",
-    "password": ""
+    "password": "",
+    "user_agent": ""
 }
 
 url_get_value = {
