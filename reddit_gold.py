@@ -39,7 +39,7 @@ def gold(reddit, msg, tx_queue, failover_time):
 
             # check user confirmed balance is ok
             if user.get_balance_confirmed() >= config.price_reddit_gold:
-                msg.reply(Template(lang.message_gold_no_enough_doge).render(username=user.username))
+                msg.reply(Template(lang.message_gold_no_enough_maga).render(username=user.username))
                 return False
 
             # send amount of one month of gold to address
